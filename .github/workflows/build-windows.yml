@@ -27,11 +27,11 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --noconsole --name "DesktopPetSprites" generate_3d_sprites.py
+          pyinstaller --onefile --noconsole --name "DesktopPet" pet_app.py
 
       - name: Upload EXE as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DesktopPetSprites-windows
-          path: dist/DesktopPetSprites.exe
+          name: DesktopPet-windows
+          path: dist/DesktopPet.exe
           retention-days: 30
